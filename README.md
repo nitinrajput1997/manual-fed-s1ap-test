@@ -36,3 +36,21 @@ fab --fabfile=dev_tools.py register_federated_vm
 fab --fabfile=dev_tools.py register_feg_gw
 ```
 
+### Deploy Test VM
+```
+cd magma/lte/gateway
+vagrant up magma_test
+vagrant ssh magma_test
+
+# inside vagrant vm
+cd magma/lte/gateway/python
+make
+
+# exit from vagrant vm
+exit
+```
+### Deploy Traffic VM
+```
+cd magma/lte/gateway
+vagrant up magma_trfserver
+```
