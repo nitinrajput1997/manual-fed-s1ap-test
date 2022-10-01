@@ -54,3 +54,17 @@ exit
 cd magma/lte/gateway
 vagrant up magma_trfserver
 ```
+
+### Run test manually
+We will run fed attach-detach test
+```
+cd magma/lte/gateway
+vagrant ssh magma_test
+
+# inside vagrant vm
+cd magma/lte/gateway/python/integ_tests
+make fed_integ_test TESTS=federated_tests/s1aptests/test_attach_detach.py
+
+# once the test is done, you can exit the vagrant vm
+exit
+```
