@@ -16,5 +16,8 @@ exit
 
 ### Deploy Fed Gateway
 ```
-
+# inside magma vagrant vm
+cd magma/lte/gateway/python/integ_tests/federated_tests/docker
+docker-compose build
+docker-compose up -d
 ```
