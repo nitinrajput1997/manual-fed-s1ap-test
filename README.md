@@ -21,3 +21,18 @@ cd magma/lte/gateway/python/integ_tests/federated_tests/docker
 docker-compose build
 docker-compose up -d
 ```
+
+### Deploy Orc8r
+```
+#on host
+cd magma/orc8r/cloud/docker
+./build.py -a
+./run.py
+
+# return to agw folder
+cd magma/lte/gateway
+# register gateways
+fab --fabfile=dev_tools.py register_federated_vm
+fab --fabfile=dev_tools.py register_feg_gw
+```
+
